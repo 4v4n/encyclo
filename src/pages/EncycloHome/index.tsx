@@ -2,6 +2,7 @@ import { useRequest } from "ahooks";
 import "./styles.css";
 import { reqDitto } from "../../api";
 import React, { useEffect } from "react";
+import Header from "../../components/Header";
 
 const EncycloHome: React.FC = () => {
   const { data, loading } = useRequest(reqDitto);
@@ -20,10 +21,13 @@ const EncycloHome: React.FC = () => {
 
   return (
     <div className="home">
-      <h1>EncycloHome</h1>
-      {data && <img src={data.sprites.front_default} alt="sprite"/>}
-
-      {data && <h1>{JSON.stringify(data)}</h1>}
+     
+      <Header />
+      {/*  Featured Creature  one random */}
+      
+      {/*  Popular Creatures */}
+      {/*  creature types */}
+      {/*  creature locations */}
     </div>
   );
 };
